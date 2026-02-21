@@ -1,0 +1,375 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.home-welcome {
+  margin-bottom: 0.5rem;
+  animation: slideUp 0.6s var(--ease-out-expo);
+}
+
+.home-welcome h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+.home-welcome p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+.score-card {
+  background: var(--card-overlay);
+  backdrop-filter: blur(16px);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  border: 2px solid rgba(34, 197, 94, 0.25);
+  padding: 2rem;
+  text-align: center;
+  animation: slideUp 0.7s var(--ease-out-expo) 0.1s both;
+  transition: transform var(--duration-slow) var(--ease-spring), box-shadow var(--duration-slow) var(--ease-smooth);
+  transform-style: preserve-3d;
+}
+
+.score-card:hover {
+  transform: translateY(-8px) translateZ(12px);
+  box-shadow: var(--shadow-deep), 0 0 40px rgba(34, 197, 94, 0.12);
+}
+
+.score-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.score-emoji {
+  font-size: 1.75rem;
+  animation: float 3s var(--ease-smooth) infinite;
+}
+
+.score-header h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.score-circle {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--green-pale) 0%, var(--green-light) 50%, var(--green-pale) 100%);
+  border: 5px solid var(--score-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--duration-slow) var(--ease-spring), box-shadow var(--duration-slow) var(--ease-smooth);
+  box-shadow: inset 0 2px 12px rgba(255,255,255,0.6), 0 4px 20px rgba(5, 100, 50, 0.15);
+}
+
+.score-card:hover .score-circle {
+  transform: scale(1.05);
+  box-shadow: inset 0 2px 12px rgba(255,255,255,0.7), 0 0 30px rgba(34, 197, 94, 0.3);
+  animation: glow 2.5s var(--ease-smooth) infinite;
+}
+
+.score-value {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.score-max {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.score-grade {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.score-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 420px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.score-card-start {
+  padding: 2.5rem 2rem;
+}
+
+.home-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.home-progress-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid transparent;
+  transition: all var(--duration) var(--ease-spring);
+}
+
+.home-progress-item:hover {
+  background: var(--green-pale);
+  text-decoration: none;
+  color: var(--text);
+  transform: translateX(6px);
+  border-color: rgba(34, 197, 94, 0.3);
+  box-shadow: 0 4px 12px rgba(5, 100, 50, 0.08);
+}
+
+.home-progress-icon {
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 1.5rem;
+  text-align: center;
+  color: var(--green-mid);
+  transition: transform var(--duration) var(--ease-spring);
+}
+
+.home-progress-item:hover .home-progress-icon {
+  transform: scale(1.15);
+}
+
+.home-progress-label {
+  font-size: 0.95rem;
+}
+
+.home-progress-done {
+  color: var(--green-mid);
+  font-weight: 600;
+}
+
+/* Score shown only after user completes tasks and clicks Evaluate */
+.home-score-result {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px solid var(--score-color);
+}
+
+.home-score-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.25rem;
+  line-height: 1.2;
+}
+
+.home-score-max {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.home-score-grade {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.home-score-eligible {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.home-tile-locked {
+  cursor: pointer;
+  opacity: 0.75;
+  border-style: dashed;
+}
+
+.home-tile-locked:hover {
+  opacity: 1;
+  border-color: var(--earth-light);
+}
+
+.home-tiles-section {
+  margin-top: 0.5rem;
+  animation: slideUp 0.8s var(--ease-out-expo) 0.2s both;
+}
+
+.home-tiles-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.home-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  gap: 1.25rem;
+}
+
+.home-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 170px;
+  padding: 1.5rem 1rem;
+  background: var(--card-overlay);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 2px solid rgba(34, 197, 94, 0.25);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--duration) var(--ease-spring);
+  animation: slideUp 0.6s var(--ease-out-expo) both;
+  box-shadow: var(--shadow);
+  transform-style: preserve-3d;
+}
+
+.home-tile:nth-child(1) { animation-delay: 0.12s; }
+.home-tile:nth-child(2) { animation-delay: 0.18s; }
+.home-tile:nth-child(3) { animation-delay: 0.24s; }
+.home-tile:nth-child(4) { animation-delay: 0.3s; }
+.home-tile:nth-child(5) { animation-delay: 0.36s; }
+.home-tile:nth-child(6) { animation-delay: 0.42s; }
+
+.home-tile:hover {
+  transform: translateY(-12px) scale(1.03) translateZ(16px);
+  border-color: var(--green-accent);
+  box-shadow: var(--shadow-deep), 0 0 30px rgba(34, 197, 94, 0.15);
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.home-tile:active {
+  transform: translateY(-6px) scale(1.01);
+}
+
+.home-tile-active {
+  border-color: var(--green-mid);
+  background: linear-gradient(145deg, var(--green-pale) 0%, rgba(134, 239, 172, 0.4) 100%);
+  box-shadow: 0 6px 24px rgba(5, 100, 50, 0.18);
+}
+
+.home-tile-icon {
+  font-size: 3.25rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  display: block;
+  transition: transform var(--duration) var(--ease-spring);
+}
+
+.home-tile:hover .home-tile-icon {
+  transform: scale(1.2) translateY(-4px);
+}
+
+.home-tile-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.home-tile-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.home-tips {
+  background: var(--card-overlay);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 2px solid rgba(34, 197, 94, 0.2);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  animation: slideUp 0.9s var(--ease-out-expo) 0.3s both;
+  transition: transform var(--duration) var(--ease-spring), box-shadow var(--duration) var(--ease-smooth);
+}
+
+.home-tips:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.home-tips h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.home-tips ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.home-tips li {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  padding-left: 1.25rem;
+  position: relative;
+  transition: color var(--duration) var(--ease-smooth), transform var(--duration) var(--ease-spring);
+}
+
+.home-tips li:hover {
+  color: var(--green-mid);
+  transform: translateX(6px);
+}
+
+.home-tips li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--green-accent);
+  font-weight: 700;
+}
+
+@media (max-width: 500px) {
+  .home-tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-tile-desc {
+    display: none;
+  }
+
+  .home-tile {
+    min-height: 125px;
+    padding: 1rem;
+  }
+
+  .home-tile-icon {
+    font-size: 2.75rem;
+  }
+}

@@ -1,0 +1,284 @@
+.smart-milestones {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sm-hero {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.sm-hero-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.sm-hero h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.sm-hero-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.sm-progress-wrap {
+  background: var(--card);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 1.25rem 1.5rem;
+}
+
+.sm-progress-bar {
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.sm-progress-fill {
+  height: 100%;
+  background: var(--green-mid);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.sm-progress-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.sm-period-card {
+  background: var(--card);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.sm-period-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.sm-period-value {
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.sm-period-value strong {
+  color: var(--green-mid);
+}
+
+.sm-period-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.sm-period-date {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.sm-period-date input {
+  max-width: 180px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.sm-stage-period-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0 0 2.65rem;
+}
+
+.sm-time-lock-msg {
+  font-size: 0.9rem;
+  color: var(--earth);
+  background: #fff8e1;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius);
+  margin: 0.75rem 0 0 2.65rem;
+  border: 1px solid #ffe082;
+}
+
+.sm-badge-completed {
+  background: #e8f5e9;
+  color: var(--green-accent);
+}
+
+.sm-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sm-stage-card {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.sm-stage-card.sm-stage-locked {
+  opacity: 0.85;
+}
+
+.sm-stage-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sm-stage-icon {
+  font-size: 1.75rem;
+}
+
+.sm-stage-head h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.sm-stage-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.sm-stage-badge {
+  margin-left: auto;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.sm-badge-active {
+  background: var(--green-pale);
+  color: var(--green-mid);
+}
+
+.sm-badge-locked {
+  background: #eee;
+  color: var(--text-muted);
+}
+
+.sm-stage-condition {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0.5rem 0 0 2.65rem;
+}
+
+.sm-stage-note,
+.sm-stage-unlocked {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0.75rem 0 0 2.65rem;
+}
+
+.sm-stage-unlocked {
+  color: var(--green-mid);
+  font-weight: 500;
+}
+
+.sm-moisture-form {
+  margin-top: 1rem;
+  margin-left: 2.65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 220px;
+}
+
+.sm-moisture-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.sm-moisture-form input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.sm-moisture-form input:focus {
+  outline: none;
+  border-color: var(--green-mid);
+}
+
+.sm-error {
+  font-size: 0.85rem;
+  color: var(--error);
+  margin: 0;
+}
+
+.sm-crop-verify {
+  margin-top: 1rem;
+  margin-left: 2.65rem;
+}
+
+.sm-crop-verify .btn {
+  margin-top: 0.5rem;
+}
+
+.sm-why {
+  background: var(--card);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.sm-why h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.sm-why p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .sm-stage-condition,
+  .sm-stage-period-note,
+  .sm-time-lock-msg,
+  .sm-stage-note,
+  .sm-stage-unlocked,
+  .sm-moisture-form,
+  .sm-crop-verify {
+    margin-left: 0;
+  }
+}

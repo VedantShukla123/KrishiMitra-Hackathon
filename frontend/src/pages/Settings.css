@@ -1,0 +1,106 @@
+.settings-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.settings-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  animation: slideUp 0.5s ease;
+}
+
+.settings-section h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.settings-card {
+  background: var(--card-overlay);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  border: 1px solid rgba(184, 212, 181, 0.8);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.settings-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.settings-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.settings-row:last-child {
+  border-bottom: none;
+}
+
+.settings-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.settings-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.settings-status {
+  color: var(--green-mid);
+}
+
+.settings-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.settings-table-wrap {
+  overflow-x: auto;
+}
+
+.settings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.settings-table th,
+.settings-table td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.settings-table th {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.settings-table td {
+  color: var(--text);
+}
+
+.settings-change-plus {
+  color: var(--green-mid);
+  font-weight: 600;
+}
+
+.settings-change-minus {
+  color: var(--text-muted);
+}

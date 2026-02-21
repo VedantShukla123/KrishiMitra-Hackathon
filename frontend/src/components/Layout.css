@@ -1,0 +1,288 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header – depth and vibrant bar (z-index so dropdown can sit above main content) */
+.header {
+  position: relative;
+  z-index: 1000;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 100%);
+  backdrop-filter: blur(16px);
+  border-bottom: 2px solid rgba(34, 197, 94, 0.25);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 30px rgba(5, 100, 50, 0.12);
+  transition: transform var(--duration) var(--ease-smooth), box-shadow var(--duration) var(--ease-smooth);
+  transform: translateZ(0);
+}
+
+.header:hover {
+  box-shadow: 0 8px 36px rgba(5, 100, 50, 0.16);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Hamburger – 3D press */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: transform var(--duration) var(--ease-spring), background var(--duration) var(--ease-smooth);
+}
+
+.hamburger:hover {
+  background: var(--green-pale);
+  transform: scale(1.06) translateZ(2px);
+}
+
+.hamburger:active {
+  transform: scale(0.98);
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2.5px;
+  background: var(--text);
+  border-radius: 2px;
+  margin: 0 auto;
+  transition: transform var(--duration) var(--ease-spring);
+}
+
+@media (min-width: 900px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Logo – fluid hover */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--green-mid);
+  text-decoration: none;
+  transition: color var(--duration) var(--ease-smooth), transform var(--duration) var(--ease-spring);
+}
+
+.logo:hover {
+  text-decoration: none;
+  color: var(--green-accent);
+  transform: scale(1.03) translateY(-1px);
+}
+
+.logo:active {
+  transform: scale(0.99);
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+  transition: transform var(--duration) var(--ease-spring);
+}
+
+.logo:hover .logo-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.header-actions a {
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  transition: color var(--duration) var(--ease-smooth), transform var(--duration) var(--ease-spring);
+}
+
+.header-actions a:hover {
+  color: var(--green-accent);
+  transform: translateY(-2px);
+}
+
+.layout-body {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+/* Lang switcher – 3D dropdown */
+.lang-switcher {
+  position: relative;
+  perspective: 400px;
+}
+
+.lang-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  font-family: var(--font);
+  font-size: 0.9rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: all var(--duration) var(--ease-spring);
+}
+
+.lang-trigger:hover {
+  border-color: var(--green-accent);
+  background: var(--green-pale);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.lang-trigger:active {
+  transform: translateY(0);
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin: 0.35rem 0 0;
+  padding: 0.4rem;
+  list-style: none;
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-deep);
+  min-width: 130px;
+  z-index: 10001;
+  pointer-events: auto;
+  animation: pageEnter 0.3s var(--ease-out-expo);
+  transform-origin: top right;
+}
+
+.lang-dropdown li {
+  pointer-events: auto;
+}
+
+.lang-option {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all var(--duration) var(--ease-spring);
+}
+
+.lang-option:hover {
+  background: var(--green-pale);
+  color: var(--green-mid);
+  transform: translateX(4px);
+}
+
+.lang-option-active {
+  background: var(--green-pale);
+  color: var(--green-mid);
+  font-weight: 600;
+}
+
+.user-name {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding: 0 0.25rem;
+}
+
+/* Buttons – 3D press and vibrant */
+.btn {
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  transition: transform var(--duration) var(--ease-spring), box-shadow var(--duration) var(--ease-smooth), background var(--duration) var(--ease-smooth);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(5, 100, 50, 0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--green-accent) 0%, var(--green-mid) 100%);
+  color: white;
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.35);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(180deg, var(--green-bright) 0%, var(--green-accent) 100%);
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.4);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.btn-ghost:hover {
+  background: var(--green-pale);
+  color: var(--green-mid);
+}
+
+.main {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  max-width: 1200px;
+  width: 100%;
+  overflow: auto;
+  margin: 0 auto;
+}
+
+.footer {
+  background: linear-gradient(0deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 100%);
+  backdrop-filter: blur(16px);
+  border-top: 2px solid rgba(34, 197, 94, 0.2);
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  transition: box-shadow var(--duration) var(--ease-smooth);
+}
+
+.footer:hover {
+  box-shadow: 0 -4px 20px rgba(5, 100, 50, 0.08);
+}
+
+.footer strong {
+  color: var(--green-mid);
+  font-weight: 600;
+}

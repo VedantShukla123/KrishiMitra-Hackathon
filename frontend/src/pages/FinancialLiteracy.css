@@ -1,0 +1,155 @@
+.financial-literacy {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.fl-hero {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.fl-hero-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.fl-hero h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.fl-hero-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.fl-quest-card {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  padding: 2rem;
+}
+
+.fl-quest-header {
+  margin-bottom: 1.5rem;
+}
+
+.fl-quest-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  background: var(--green-pale);
+  color: var(--green-mid);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.fl-quest-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+
+.fl-quest-header p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.fl-quest-reward {
+  font-weight: 600;
+  color: var(--green-mid) !important;
+}
+
+.fl-video-section,
+.fl-quiz-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.fl-video-section h3,
+.fl-quiz-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.fl-video-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+
+.fl-video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fl-quest-done {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--green-pale);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.fl-quest-done-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.fl-quest-done p {
+  margin-bottom: 0.35rem;
+  color: var(--text);
+}
+
+.fl-quest-done-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem !important;
+}
+
+.fl-quest-done .btn {
+  margin-top: 0.5rem;
+}
+
+.fl-why {
+  background: var(--card);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.fl-why h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.fl-why p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}

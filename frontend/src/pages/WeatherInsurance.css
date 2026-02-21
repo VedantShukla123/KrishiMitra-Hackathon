@@ -1,0 +1,152 @@
+.weather-insurance {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.wi-hero {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.wi-hero-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.wi-hero h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.wi-hero-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.wi-status-card {
+  background: var(--card-overlay);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(184, 212, 181, 0.8);
+  padding: 2rem;
+  animation: slideUp 0.6s ease 0.1s both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wi-status-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.wi-status-card h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+.wi-loading {
+  color: var(--text-muted);
+  padding: 1rem 0;
+}
+
+.wi-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.wi-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.wi-metric-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.wi-metric-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.wi-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.wi-badge-ok {
+  background: var(--green-pale);
+  color: var(--green-mid);
+}
+
+.wi-badge-triggered {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.wi-message {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.wi-how,
+.wi-why {
+  background: var(--card);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.wi-how h3,
+.wi-why h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.wi-how p,
+.wi-why ul {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.wi-why ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wi-why li {
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.wi-why li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--green-mid);
+  font-weight: 700;
+}
